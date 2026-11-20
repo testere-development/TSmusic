@@ -1,72 +1,36 @@
-Testere Downloader
-A lightweight media downloader with a simple Flet interface. Choose an
-output format, paste a media URL, and start downloading.
-Features
-- MP3 and MP4 output options
-- Download progress indicator
-- Sequential downloads: a second download cannot start while the
-  current one is running
-- URL field is cleared as soon as the download starts
-- Light and dark themes
-- Multiple language options provided by the project settings
-- GitHub shortcut in the application interface
-- Uses the project's Download class and FFmpeg configuration
-Requirements
-- Python 3.10 or newer
-- Flet
-- yt-dlp
-- FFmpeg
-- Project modules: settings.py and download.py (or dowload.py,
-  if that is the filename used)
-The exact dependencies and Android build configuration are defined in
-pyproject.toml.
-Project structure
-A typical layout:
-project/
-├── pyproject.toml
-├── README.md
-└── src/
-    ├── main.py
-    ├── settings.py
-    ├── download.py
-    └── assets/
-        └── icon.png
-Adjust this structure to match the actual project. The application entry
-point and asset paths must match your Flet configuration.
-Run locally
-For a project managed with uv:
-uv sync
-uv run flet run
-If you use another environment or package manager, install the
-dependencies and run the Flet application with the equivalent commands.
-Build for Android
-With the Flet CLI and Android build requirements installed:
-flet build apk
-The current Android settings in the supplied pyproject.toml are:
-- min_sdk_version = 24
-- target_sdk_version = 28
-- target_arch = ["arm64-v8a", "armeabi-v7a"]
-- split_per_abi = false
-Change these values in pyproject.toml if your build requirements
-change.
-How to use
-1. Open the application.
-2. Select MP3 or MP4.
-3. Paste a valid http:// or https:// media URL.
-4. Press the download button.
-5. Wait for the download and any required conversion to finish.
-6. Start another download after the current one completes.
-Notes
-- The interface allows only one download at a time.
-- Download and conversion behavior depends on the implementation of
-  the project's Download class and its FFmpeg setup.
-- Make sure FFmpeg is available at the path configured in
-  settings.py.
-- Download only content you have the right to access and save. Respect
-  the source service's terms and applicable copyright laws.
-License
-No license has been specified yet. Add a LICENSE file before
-publishing if you want to define how others may use, modify, and
-distribute this project.
-Testere Development
-GitHub
+# Testere Downloader (Android APK)
+
+**Flet** ilə hazırlanmış, **MP3** və **MP4** formatlarında media yükləmə tətbiqi (`main.py`)[cite: 1]. Repozitoriyada hazır **Android APK** versiyası təqdim olunur.
+
+---
+
+## Xüsusiyyətlər
+
+* **Format seçimi (`MP3` / `MP4`):** `MP3` (`3`) və `MP4` (`4`) formatları seçilərək `Download.dow(url, cohi)` funksiyası ilə yükləmə başladılır[cite: 1]. Aktiv yükləmə zamanı format düymələri kilidlənir[cite: 1].
+* **URL yoxlanışı və avtomatik təmizləmə:** Boş sahələr və düzgün olmayan `http` / `https` keçidləri bloklanır[cite: 1]. Yükləmə başlanğıcında `URL` sahəsi avtomatik təmizlənir[cite: 1].
+* **Ardıcıl yükləmə:** Bir yükləmə tam bitməyənə qədər ikinci yükləmə başlanmır[cite: 1].
+* **İrəliləyiş və status göstəricisi:** Yükləmə faizi (`ProgressBar`), çevirmə (`converting`), tamamlanma (`done`) və xəta (`error`) statusları ekranda göstərilir[cite: 1].
+* **Mövzu və dil seçimi:** Açıq və tünd mövzu keçidi, həmçinin `settings.py` vasitəsilə dil dəyişimi dəstəklənir[cite: 1].
+* **GitHub keçidi:** Üst soldakı **Testere** loqosu vasitəsilə `https://github.com/testere-development` səhifəsi açılır[cite: 1].
+
+---
+
+## Android-ə Quraşdırma (APK)
+
+1. Repozitoriyanın **Releases** və ya fayl bölməsindən **Testere Downloader** `.apk` faylını yükləyin.
+2. Android cihazınızda **Naməlum mənbələrdən quraşdırmaya** (brauzer və ya fayl meneceri üçün) icazə verin.
+3. Yüklənmiş `.apk` faylına toxunun və **Quraşdır** düyməsini seçin.
+4. Quraşdırma bitdikdən sonra tətbiqi açın.
+
+---
+
+## İstifadə Qaydası
+
+1. Tətbiqi açın (istəsəniz dili və ya açıq/tünd mövzunu seçin)[cite: 1].
+2. **MP3** və ya **MP4** formatını seçin[cite: 1].
+3. Etibarlı `http://` və ya `https://` media keçidini yapışdırıb yükləmə düyməsinə basın[cite: 1].
+4. Yükləmə və çevirmə prosesinin bitməsini gözləyin; cari proses bitdikdən sonra yeni yükləməyə başlaya bilərsiniz[cite: 1].
+
+---
+
+**Testere Development** · [GitHub](https://github.com/testere-development)[cite: 1]
