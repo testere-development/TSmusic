@@ -4,7 +4,6 @@
 
 <img src="Screenshot_2026-11-20-23-05-02-264_com.mycompany.tsmusic.jpg" alt="Ekran görüntüsü" width="260" />
 
-*(Şəkli repozitoriyada başqa qovluqda saxlayırsınızsa, məsələn `assets/Screenshot_2026-11-20-23-05-02-264_com.mycompany.tsmusic.jpg`, `src` yolunu ona görə dəyişin.)*
 
 ---
 
