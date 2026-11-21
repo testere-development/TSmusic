@@ -2,8 +2,7 @@
 
 **Flet** ilə hazırlanmış, **MP3** və **MP4** formatlarında media yükləmə tətbiqi (`main.py`)[cite: 1]. Repozitoriyada hazır **Android APK** versiyası təqdim olunur.
 
-<img src="Screenshot1.jpg" alt="Ekran görüntüsü" width="260" />
-<img src="Screenshot2.jpg" alt="Ekran görüntüsü" width="260" />
+<img src="Screenshot1.jpg" alt="Ekran görüntüsü" width="260" /><img src="Screenshot2.jpg" alt="Ekran görüntüsü" width="260" />
 
 ---
 
